@@ -306,9 +306,7 @@ button:not(:disabled) {
 
 .carousel-image {
   display: flex;
-  width: auto;
   height: 500;
-  margin: 0 0 0 50;
 }
 
 .carousel-text {
