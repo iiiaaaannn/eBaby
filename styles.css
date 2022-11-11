@@ -306,7 +306,7 @@ button:not(:disabled) {
 
 .carousel-image {
   display: flex;
-  height: 500;
+  height: 500px;
 }
 
 .carousel-text {
