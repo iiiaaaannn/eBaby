@@ -483,6 +483,7 @@ button:not(:disabled) {
 .sale-bg {
   height: 550px;
   border: 20px solid white;
+
 }
 
 .sale-inside {
@@ -492,8 +493,12 @@ button:not(:disabled) {
   overflow: hidden;
   padding-top: 48px;
   position: relative;
+  cursor: pointer;
+}
 
-
+.sale-inside:hover {
+  transform: scale(1.1);
+  outline-offset: 1rem;
 }
 
 .sale-img-sml {
@@ -501,6 +506,13 @@ button:not(:disabled) {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+
+}
+
+.sale-img-sml:hover {
+  transform: scale(1.2);
+  outline-offset: 1rem;
+
 }
 
 .sale-img-bg {
@@ -510,12 +522,25 @@ button:not(:disabled) {
   width: 70%;
 }
 
+.sale-img-bg:hover {
+  transform: scale(1.2);
+  outline-offset: 1rem;
+
+}
+
 .sale-img-xl {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+
 }
+
+.sale-img-xl:hover {
+  transform: scale(1.2);
+  outline-offset: 1rem;
+}
+
 
 .row hr {
   border: 1px solid rgb(0, 0, 0);
@@ -535,7 +560,7 @@ button:not(:disabled) {
 
 .sale-detail {
   background-color: #FFFFFF;
-  padding: 10px;
+  padding: 15px;
 }
 
 .btn-plus-minus {
@@ -919,22 +944,26 @@ h5 {
   width: 1250px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content:flex-start;
   padding: 0 20px 0 20px;
 }
 .selection {
-  font-weight: 500;
-  font-size: 21px;
+  font-weight: 550;
+  font-size: 22px;
   background: none;
   border: none;
   height: 60px;
+  margin-right: 70px;
+  color: black;
+
 }
 
-.selection-btn-active {
+.selection:hover {
   font-weight: bold;
   border-bottom: 3px solid #FE9846;
   background-color: #cecece88;
 }
+
 
 .tabs-content {
   display: none;
@@ -947,6 +976,7 @@ h5 {
 .sidebar{
   flex-shrink: 0;
 }
+
 .filter-btn{
   background: none;
   border: none;
