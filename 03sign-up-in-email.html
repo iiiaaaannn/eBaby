@@ -21,58 +21,175 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
+
+
+
+
 <body class="bg-signup">
     <div class="login-overlay ">
 
         <div class="close">
             <a href="03sign-up.html">
-                <button type="button"><img src="images/eks.svg" alt=""></button>
+                <button type="button"><img src="images/eks.svg" alt=""> </button>
             </a>
         </div>
 
         <div class="lg-center">
             <h2>SIGN UP</h2>
-            <p>Already have an account? 
+            <p>
+                Already have an account?
                 <a class="text-highlight" href="02log-in.html">Log In</a>
-            </P>
-                <div class="lg-email">
-                    <h5>Email</h5>
-                    <input class="emailAdd" type="email" name="" id="#emailAdd">
-                </div>
-                <div class="lg-email">
-                    <h5>Password</h5>
-                    <input class="emailAdd" type="password" name="" id="#emailAdd">
-                </div>
+            </p>
 
-                <div>
-                    <button class="btn-email" type="button">
-                        <a class="text-highlight-blk" href="#">
-                            <h6>Sign up</h6>
-                        </a>
-                    </button>
-                </div>
-
-                <div class="line">
-                    <hr>
-                    <h5 style="margin: 0;">or sign up with</h5>
-                    <hr>
-                </div>
-                <div>
-                    <img class="option" src="images/fbColor.svg" alt="">
-                    <img class="option" src="images/googleColor.svg" alt="">
-                </div>
-
-
+            <!--email-->
+            <div class="lg-email">
+                <h5>Email</h5>
+                <input class="emailAdd" type="email" placeholder="Enter Email" name="" id="email" required>
             </div>
+
+
+            <!--password-->
+            <div class="lg-email">
+                <h5>Password</h5>
+                <input class="emailAdd" placeholder="Password" name="psw" id="psw" required">
+            </div>
+
+            <p> By creating an account you agree to our <a href="#"> Terms & Privacy</a>.</p>
+
+            <div>
+                <button class="btn-email" id="submitData" name="submitData" type="button">
+                    <a class="text-highlight-blk" href="#">
+                        <h6>Sign up</h6>
+                    </a>
+                </button>
+            </div>         
+            <div class="line">
+                <hr>
+                <h5 style="margin: 0;">or sign up with</h5>
+                <hr>
+            </div>
+            <div>
+                <img class="option" src="images/fbColor.svg" alt="">
+                <img class="option" src="images/googleColor.svg" alt="">
+            </div>
+
+
+        </div>
         </div>
 
 
-        <!-- JAVASCRIPT -->
-        <script src="main.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
+    <!--firebase-->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+        import {
+            getAuth,
+            createUserWithEmailAndPassword,
+            signInWithEmailAndPassword,
+            signOut
+        } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+        import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
-</body>
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
 
-</html>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyB3nm4fFzMVlXM0VdHu8l9yzfJTP7cRMEU",
+            authDomain: "e-baby-authentication.firebaseapp.com",
+            projectId: "e-baby-authentication",
+            storageBucket: "e-baby-authentication.appspot.com",
+            messagingSenderId: "575464590612",
+            appId: "1:575464590612:web:b99707df8a58b7e4650601"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const database = getDatabase();
+
+
+        submitData.addEventListener('click', (e) => {
+
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('psw').value;
+
+
+
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+
+                    // Signed in
+                    const user = userCredential.user;
+                    //...user uid
+                    set(ref(database, 'users/' + user.uid), {
+                        email: email,
+                        password: password
+                    })
+
+                        .then(() => {
+                            // Data saved successfully!
+                            alert('user create successfully');
+                        })
+
+                        .catch((error) => {
+                            // The write failed...
+                            alert('error!');
+                        });
+
+
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    // ..
+
+                    alert('errorMessage');
+                });
+
+
+
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed in
+                    const user = userCredential.user;
+
+
+                    var lgDate = new Date();
+
+                    update(ref(database, 'users/' + user.uid), {
+
+                        last_login: lgDate,
+                    })
+
+                        .then(() => {
+                            //Data saved successfully!
+                            alert('user login  successfully');
+
+                        })
+                        .catch((error) => {
+                            // The write failed...
+                            alert('error!');
+                        });
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    alert('errorMessage');
+                });
+
+            signOut(auth).then(() => {
+
+
+                //Sign out successfully
+            }).catch((error) => {
+                //an error happened
+
+            });
+
+        });
+
+    </script>
+
+    </body>
+    </html>
