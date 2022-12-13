@@ -228,7 +228,7 @@ button:not(:disabled) {
   background-color: white;
   padding: 3px 30px;
   z-index: 10;
-  position: relative;
+  position: static;
 }
 
 #shopBreak {
@@ -239,6 +239,7 @@ button:not(:disabled) {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-size: 48px;
+
 }
 
 
@@ -247,11 +248,12 @@ button:not(:disabled) {
   margin: -38px auto 70px auto;
   max-width: 1250px;
   border-radius: 10px;
-  position: relative;
+  position: static;
   z-index: 1;
   color: #000;
   border: 1px solid black;
   opacity: 100%;
+
 }
 
 #category h2 {
@@ -496,10 +498,7 @@ button:not(:disabled) {
   cursor: pointer;
 }
 
-.sale-inside:hover {
-  transform: scale(1.1);
-  outline-offset: 1rem;
-}
+
 
 .sale-img-sml {
   display: block;
@@ -594,6 +593,95 @@ button:not(:disabled) {
   right: 0;
 }
 
+
+/*products-preview*/
+.products-preview{
+  z index: 1;
+  position: fixed;
+  top:20%; left:20%;
+  min-height: 60%;
+  width: 60%;
+  background: #FFFEFD;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 1px gray;
+  cursor: pointer;
+}
+
+.products-preview .preview{
+  z-index: 1;
+  padding: 3rem;
+  text-align: center;
+  background: #fff;
+  position: relative;
+  margin:5rem;
+  width:40rem;
+  display: none;
+
+}
+
+.mainimg{
+  z index: 1;
+  padding: 10%;
+  width:100%;
+}
+.im{
+  z-index: 1;
+  height: 300px;
+}
+
+.small{
+  z-index: 1;
+  position: absolute;
+  bottom:1%; left:8%;
+  width: 6%;
+  height: 10%;
+  margin: 5%;
+}
+
+.products-preview .preview .active{
+  z-index: 1;
+  display: inline-block;
+}
+
+.products-preview .preview img{
+  z-index:1;
+  height: 20rem;
+}
+.product-info .item{
+  z-index: 1;
+  padding: 10px;
+  text-align: left;
+  margin: 5px;
+}
+
+.title{
+  z-index: 1;
+  color: orange;
+
+}
+.quantity{
+  z-index: 1;
+  width: 5rem;
+}
+.button{
+  z-index: 1;
+  width: 50%;
+}
+.fa .fab{
+  width: 80px;
+  height: 80px;
+  padding: 5rem;
+
+}
+.icons{
+  z-index: 1;
+  height: 3%;
+  width: 3%;
+  margin: 1%;
+  position: relative;
+}
 /* FOOTER */
 
 footer {
