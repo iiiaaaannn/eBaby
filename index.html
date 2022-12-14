@@ -17,112 +17,104 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap"
         rel="stylesheet">
 
+    <!-- font awesome cdn link  -->
+    <script src="https://kit.fontawesome.com/fd4f2c9930.js" crossorigin="anonymous"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <header class="container-fluid">
-        <div class="wrapper ">
-
-            <div class="navbar navbar-expand-lg logo-margin">
-                <img src="images/LOGO.svg" class="logo" alt="">
-                <div class="logo-text">
-                    E-BABY
-                    <h4 class="nav-h4">FOR ALL YOUR PET'S NEEDS</h4>
+    <header class="head-bg">
+        <div class="wrapper primary-header">
+            <div>
+                <div id="logo" class="">
+                    <img src="images/LOGO.svg" class="logo" alt="">
+                    <div class="logo-text">
+                        <h1>E-BABY</h1>
+                        <h4 class="nav-h4">FOR ALL YOUR PET'S NEEDS</h4>
+                    </div>
                 </div>
-
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="search"
-                        aria-label="Example text with button addon" aria-describedby="button-addon1">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon1"> <img
-                            src="images/search.svg" alt="">
-                    </button>
-                </div>
-
             </div>
 
-            <nav>
-                <ul>
-                    <li>
-                        <a class="tab-selected" href="04home.html" >HOME</a>
-                    </li>
-
-                    <li>
-                        <div class="flex">
-                            <a href="05shop.html">SHOP ALL</a>
-                            <div class="input-group mb-3">
-                                <button type="button" class="btn-drop  btn-outline-secondary " data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <img src="images/dropdown.svg" alt="">
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-shop">
-                                    <div class="wa">
-                                        <li><a class="dropdown-item" href="#">DOGS</a></li>
-                                        <li><a class="dropdown-item" href="#">CATS</a></li>
-                                        <li><a class="dropdown-item" href="#">BIRDS</a></li>
-                                        <li><a class="dropdown-item" href="#">FISH & AQUATICS</a></li>
-                                        <li><a class="dropdown-item" href="#">SMALL ANIMALS</a></li>
-                                        <li><a class="dropdown-item" href="#">REPTILES</a></li>
-                                        <li><a class="dropdown-item" href="#">WARDROBE</a></li>
-                                        <li><a class="dropdown-item" href="#">ESSENTIALS</a></li>
-                                    </div>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </li>
-
-                    <li>
-                        <a href="06contact.html">CONTACT</a>
-                    </li>
-
-                    <li>
-                        <a href="07about.html">ABOUT US</a>
-                    </li>
-                </ul>
-
-                <ul>
-                    <li>
-                        <div class="flex">
+            <button class="mobile-nav-toggle" aria-controls="primary-nav" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+            </button>
+            <nav class="search-nav-container">
+                <div class="primary-nav" id="primary-nav" data-visible="false">
+                    <ul class="flex-nav search-login">
+                        <li class="nav-side-padding" style="display: flex; flex-direction: row;">
+                            <form action="" class="search">
+                                <input type="text" name="" id="" placeholder="search">
+                            </form>
+                            <button class="search-button"><img src="images/search.svg" alt=""></button>
+                        </li>
+                        <li class="nav-side-padding">
+                            <a href="02log-in-email.html">LOG IN</a>
                             <img src="images/user.svg" alt="">
-                            <a href="02log-in.html">LOG IN</a>
+                        </li>
+                    </ul>
+                    <div class="nav-tab-bg">
+                        <ul class="flex-nav ">
+                            <li class="tab-selected">
+                                <a href="04home.html">HOME</a>
+                            </li>
+                            <li class="nav-side-padding">
+                                <div class="flex">
+                                    <a href="05shop.html">SHOP ALL</a>
 
-                        </div>
-                    </li>
-                    <li>
-                        <img src="images/cart.svg" alt="">
-                    </li>
-                </ul>
+                                    <button type="button" class="btn-drop  btn-outline-secondary "
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="images/dropdown.svg" alt="">
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <div class="wa">
+                                            <li><a class="dropdown-item" href="#">DOGS</a></li>
+                                            <li><a class="dropdown-item" href="#">CATS</a></li>
+                                        </div>
+                                    </ul>
+
+                                </div>
+
+                            </li>
+
+                            <li class="nav-side-padding">
+                                <a href="06contact.html">CONTACT</a>
+                            </li>
+
+                            <li class="nav-side-padding">
+                                <a href="07about.html">ABOUT US</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
-            <!-- end of nav bar -->
+        </div>
 
-            <div class="call-to-action row ">
-                <div class="left col-lg-6">
-                    <h1>A <span class="text-highlight">PET SHOP</span> FOR ALL <br>
+        <div id="cta" class="wrapper row hi">
+            <div class="left col-lg-6">
+                <div>
+                    <h1 class="cta-main">A <span class="text-highlight">PET SHOP</span> FOR ALL
                         YOUR <span class="text-highlight">PET NEEDS!</span></h1>
-                    <div>
-                        <h2>Create an Account!</h2>
-                        <div class="input-group mb-3 drp-shdw">
-                            <input type="email" class="form-control" placeholder="sign up"
-                                aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                <button class="btn btn-outline-secondary" type="button" id="button-addon1">
-                                    <a href="03sign-up-in-email.html">
-                                        <img src="images/arrowR.svg" alt="">
-                                    </a>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="already-acc">
-                        <h6>Already have an account? <a href="#">Click here to Log In</a></h6>
-                    </div>
                 </div>
 
-                <div class="right col-lg-6">
-                    <img src="images/dogo.svg" alt="">
+                <div class="cta-search-wrapper">
+                    <h2 class="cta-sub">Create an Account!</h2>
+                    <div class="cta-search">
+                        <form action="" class="cta-email">
+                            <input type="text" name="" id="" placeholder="email">
+                        </form>
+                        <button type="submit" class="search-button"><img src="images/arrowR.svg" alt=""></button>
+                    </div>
                 </div>
+                <div>
+                    <h6 class="cta-mini">Already have an account? <a href="#">Click here to Log In</a></h6>
+                </div>
+            </div>
+
+            <div class="right col-lg-6">
+                <img src="images/dogo.png" alt="">
             </div>
         </div>
     </header>
@@ -142,10 +134,10 @@
                                 <spam class="text-highlight">TREAT</spam> YOUR FUR BABIES
                             </h1>
                             <p>Reward your pets to show them <br>your appreciation.</p>
-                            <button type="button" class="btn-orange">SHOP NOW</button>
+                            <button type="button" class="btn-orange search-wrapper">SHOP NOW</button>
                         </div>
                         <div class="col-lg-6 carousel-image">
-                            <img src="images/dogeat1.webp" alt="...">
+                            <img src="images/dogeat1.svg" alt="...">
                         </div>
                     </div>
 
@@ -155,10 +147,9 @@
                     <div class="overlay row">
                         <div class="col-lg-6 carousel-text">
                             <h1>
-                                <spam class="text-highlight">DRESS</spam> YOUR PET IN STYLES
+                                <spam class="text-highlight">PLAY</spam> WITH YOUR PET!
                             </h1>
-                            <p>Spend more time with your fur babies <br>and bond with them through fun activities like
-                                dressing up!</p>
+                            <p>Spend more time with your fur babies <br>and bond with them through fun activities</p>
                             <button type="button" class="btn-orange">SHOP NOW</button>
                         </div>
                         <div class="col-lg-6 carousel-image">
@@ -171,10 +162,10 @@
                     <div class="overlay row">
                         <div class="col-lg-6 carousel-text">
                             <h1>
-                                <spam class="text-highlight">CLEAN</spam> AND <spam class="text-highlight">PLAY</spam>
-                                WITH YOUR FURRY FRIENDS
+                                  
+                                <spam class="text-highlight">KEEP</spam> YOUR FUR BABIES <spam class="text-highlight">CLEAN</spam>
                             </h1>
-                            <p>Keep your pets active and clean with our easy-to-use products!</p>
+                            <p>Keep your pets clean with our pet friendly products!</p>
                             <button type="button" class="btn-orange">SHOP NOW</button>
                         </div>
                         <div class="col-lg-6 carousel-image">
@@ -200,7 +191,7 @@
 
     <div id="cards">
         <div class="row gx-0 ">
-            <div class="col-lg-4 card-bg1">
+            <div class="col-lg-4 card-bg1 col-sm-6">
                 <div class="card-overlay ">
                     <div class="card-content">
                         <h2>ON <br>SALE</h2>
@@ -210,373 +201,525 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-4 card-bg2 ">
+  
+            <div class="col-lg-8 card-bg4 col-sm-12">
                 <div class="card-overlay">
                     <div class="card-content">
-                        <h3>Dogs</h3>
-                        <p>loyal, friendly, and loving pets.</p>
+                        <h3>Food</h3>
+                        <p>The best food for your pet.</p>
                         <button type="button" class="btn-orange">SHOP NOW</button>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4 card-bg3">
+            <div class="col-lg-12 card-bg5">
                 <div class="card-overlay">
                     <div class="card-content">
-                        <h3>Cats</h3>
-                        <p>friendly, playful, loving, cuddly</p>
-                        <button type="button" class="btn-orange">SHOP NOW</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row gx-0 ">
-            <div class="col-lg-5 card-bg4">
-                <div class="card-overlay">
-                    <div class="card-content">
-                        <h3>Birds</h3>
-                        <p>Proud, playful, <br>
-                            curious, colorful.</p>
+                        <h3>Toys</h3>
+                        <p>The best toys for your beloved pet!</p>
                         <button type="button" class="btn-orange">SHOP NOW</button>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-7 card-bg5">
+            <div class="col-lg-4 card-bg2 col-sm-6">
                 <div class="card-overlay">
                     <div class="card-content">
-                        <h3>Fish</h3>
-                        <p>colorful, vibrant, beautiful, <br>
-                            stunning, majestic.</p>
-                        <button type="button" class="btn-orange">SHOP NOW</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row gx-0 ">
-            <div class="col-lg-8 card-bg6">
-                <div class="card-overlay">
-                    <div class="card-content">
-                        <h3>Small Animals</h3>
-                        <p>Cute, small, soft, <br>
-                            playful, friendly, lovable.</p>
+                        <h3>Beddings</h3>
+                        <p>The best bedding <br> for your pet!</p>
                         <button type="button" class="btn-orange">SHOP NOW</button>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4 card-bg7">
+            <div class="col-lg-8 card-bg7">
                 <div class="card-overlay">
                     <div class="card-content">
-                        <h3>Reptiles</h3>
-                        <p>slithery, intriguing, <br>
-                            exotic, unique.</p>
+                        <h3>Essentials</h3>
+                        <p>The best way to keep <br> your pet healthy and clean!</p>
                         <button type="button" class="btn-orange">SHOP NOW</button>
                     </div>
                 </div>
             </div>
+
+
         </div>
     </div>
 
 
     <!-- ON SALE -->
 
-        <div id="onSale">
+    <div id="onSale">
         <div>
-            <h2><span class="break">ON SALE</span></h2>
+            <h2 class="midbreak"><span class="break">ON SALE</span></h2>
             <hr class="breaking-line">
         </div>
 
-        <div class="row gx-0 ">
-            <div class="col-lg-3 sale-bg">
-                <div class="sale-inside">
-                    <img src="images/ON SALE/food/cat food.png" class="sale-img-sml" alt="">
+        <div class="products-container row">
 
-                    <div class="sale-btns-pos">
-                        <div class="sale-detail">
-                            <h6>Cat Food</h6>
-                            <hr>
-                            <p>P100.00</p>
-                        </div>
-                        <div class="btn-plus-minus">
-                            <div><button class="btn" type="button" id="minus">-</button></div>
-                            <div>0</div>
-                            <div><button class="btn" type="button" id="plus">+</button></div>
-                        </div>
-
-                        <div>
-                            <button type="button" class="btn-add-cart">ADD TO CART</button>
-                        </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 sale-bg">
+                <div class="product" data-name="p-1">
+                    <div>
+                        <img src="images/ON SALE/food/cat food.png" alt="">
                     </div>
-
                 </div>
-            </div>
-
-            <div class="col-lg-3 sale-bg ">
-                <div class="sale-inside ">
-                    <img src="images/ON SALE/toy/bone.webp" class="sale-img-bg" alt="">
-
-                    <div class="sale-btns-pos">
-                        <div class="sale-detail">
-                            <h6>Cat Food</h6>
-                            <hr>
-                            <p>P100.00</p>
-                        </div>
-                        <div class="btn-plus-minus">
-                            <div><button class="btn" type="button" id="minus">-</button></div>
-                            <div>0</div>
-                            <div><button class="btn" type="button" id="plus">+</button></div>
-                        </div>
-
-                        <div>
-                            <button type="button" class="btn-add-cart">ADD TO CART</button>
-                        </div>
+                <div class="sale-btn-pos">
+                    <div class="sale-detail">
+                        <h6>CAT FOOD</h6>
+                        <hr>
+                        <p>₱100.00</p>
+                    </div>
+                    <div class=""><button type="button" class="btn-add-cart">ADD TO CART</button>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 sale-bg">
-                <div class="sale-inside">
-                    <img src="images/ON SALE/food/bows.webp" class="sale-img-bg" alt="">
-
-                    <div class="sale-btns-pos">
-                        <div class="sale-detail">
-                            <h6>Cat Food</h6>
-                            <hr>
-                            <p>P100.00</p>
-                        </div>
-                        <div class="btn-plus-minus">
-                            <div><button class="btn" type="button" id="minus">-</button></div>
-                            <div>0</div>
-                            <div><button class="btn" type="button" id="plus">+</button></div>
-                        </div>
-
-                        <div>
-                            <button type="button" class="btn-add-cart">ADD TO CART</button>
-                        </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 sale-bg">
+                <div class="product" data-name="p-2">
+                    <div>
+                        <img src="images/ON SALE/toy/bone.webp" alt="" class="sale-img-bg">
+                    </div>
+                </div>
+                <div class="sale-btn-pos">
+                    <div class="sale-detail">
+                        <h6>DOG BONE</h6>
+                        <hr>
+                        <p>₱100.00</p>
+                    </div>
+                    <div class=""><button type="button" class="btn-add-cart">ADD TO CART</button>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 sale-bg">
-                <div class="sale-inside">
-                    <img src="images/ON SALE/wardrobe/collar-pink.webp" class="sale-img-bg" alt="">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 sale-bg">
+                <div class="product" data-name="p-3">
+                    <div>
+                        <img src="images/ON SALE/food/bows.webp" alt="" class="sale-img-bg">
+                    </div>
+                </div>
+                <div class="sale-btn-pos">
+                    <div class="sale-detail">
+                        <h6>STEEL PET BOWL</h6>
+                        <hr>
+                        <p>₱100.00</p>
+                    </div>
+                    <div class=""><button type="button" class="btn-add-cart">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
 
-                    <div class="sale-btns-pos">
-                        <div class="sale-detail">
-                            <h6>Cat Food</h6>
-                            <hr>
-                            <p>P100.00</p>
-                        </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 sale-bg">
+                <div class="product" data-name="p-4">
+                    <div>
+                        <img src="images/ON SALE/wardrobe/collar-pink.webp" alt="" class="sale-img-bg">
+                    </div>
+                </div>
+                <div class="sale-btn-pos">
+                    <div class="sale-detail">
+                        <h6>PET COLLAR</h6>
+                        <hr>
+                        <p>₱100.00</p>
+                    </div>
+                    <div class=""><button type="button" class="btn-add-cart">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 sale-bg">
+                <div class="product" data-name="p-5">
+                    <div>
+                        <img src="images/ON SALE/toy/toyy.webp" alt="" class="sale-img-bg">
+                    </div>
+                </div>
+                <div class="sale-btn-pos">
+                    <div class="sale-detail">
+                        <h6>COTTON DOG ROPE</h6>
+                        <hr>
+                        <p>₱100.00</p>
+                    </div>
+                    <div class=""><button type="button" class="btn-add-cart">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 sale-bg">
+                <div class="product" data-name="p-6">
+                    <div>
+                        <img src="images/ON SALE/toy/ball.webp" alt="" class="sale-img-bg">
+                    </div>
+                </div>
+                <div class="sale-btn-pos">
+                    <div class="sale-detail">
+                        <h6>BALL</h6>
+                        <hr>
+                        <p>₱100.00</p>
+                    </div>
+                    <div class=""><button type="button" class="btn-add-cart">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 sale-bg">
+                <div class="product" data-name="p-7">
+                    <div>
+                        <img src="images/ON SALE/toy/pole.webp" alt="" class="sale-img-bg">
+                    </div>
+                </div>
+                <div class="sale-btn-pos">
+                    <div class="sale-detail">
+                        <h6>CAT POLE</h6>
+                        <hr>
+                        <p>₱100.00</p>
+                    </div>
+                    <div class=""><button type="button" class="btn-add-cart">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 sale-bg">
+                <div class="product" data-name="p-8">
+                    <div>
+                        <img src="images/ON SALE/food/food2.webp" alt="" class="sale-img-xl">
+                    </div>
+                </div>
+                <div class="sale-btn-pos">
+                    <div class="sale-detail">
+                        <h6>PLASTIC PET BOWL</h6>
+                        <hr>
+                        <p>₱100.00</p>
+                    </div>
+                    <div class=""><button type="button" class="btn-add-cart">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="products-preview">
+
+            <div class="preview" data-target="p-1">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="images/ON SALE/food/cat food.png" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                        <h1>CAT FOOD</h1>
+                        <h6>ITEM #001</h6>
+                        <h2>100.00</h2>
+                        <h6>QUANTITY</h6>
                         <div class="btn-plus-minus">
-                            <div><button class="btn" type="button" id="minus">-</button></div>
+                            <button class="btn" type="button" id="minus">-</button>
                             <div>0</div>
-                            <div><button class="btn" type="button" id="plus">+</button></div>
+                            <button class="btn" type="button" id="plus">+</button>
                         </div>
-
                         <div>
                             <button type="button" class="btn-add-cart">ADD TO CART</button>
                         </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit asperiores nesciunt
+                            maxime enim error explicabo sapiente quisquam autem, dolore eligendi in vero aspernatur.
+                            Nostrum consequatur ducimus eaque earum labore esse!</p>
+                        <i class="fa fa-times"></i>
+                        <div class="fa-bot fa fa-whatsapp fa-2x"></div>
+                        <div class="fa-bot fa fa-facebook fa-2x"></div>
+                        <div class="fa-bot fa fa-twitter fa-2x"></div>
+                        <div class="fa-bot fa fa-pinterest fa-2x"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview" data-target="p-2">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="images/ON SALE/toy/bone.webp" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                        <h1>Dog Bone</h1>
+                        <h6>ITEM #002</h6>
+                        <h2>100.00</h2>
+                        <h6>QUANTITY</h6>
+                        <div class="btn-plus-minus">
+                            <button class="btn" type="button" id="minus">-</button>
+                            <div>0</div>
+                            <button class="btn" type="button" id="plus">+</button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn-add-cart">ADD TO CART</button>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit asperiores nesciunt
+                            maxime enim error explicabo sapiente quisquam autem, dolore eligendi in vero aspernatur.
+                            Nostrum consequatur ducimus eaque earum labore esse!</p>
+                        <i class="fa fa-times"></i>
+                        <div class="fa-bot fa fa-whatsapp fa-2x"></div>
+                        <div class="fa-bot fa fa-facebook fa-2x"></div>
+                        <div class="fa-bot fa fa-twitter fa-2x"></div>
+                        <div class="fa-bot fa fa-pinterest fa-2x"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview" data-target="p-3">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="images/ON SALE/food/bows.webp" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                        <h1>STEEL PET BOWL</h1>
+                        <h6>ITEM #003</h6>
+                        <h2>100.00</h2>
+                        <h6>QUANTITY</h6>
+                        <div class="btn-plus-minus">
+                            <button class="btn" type="button" id="minus">-</button>
+                            <div>0</div>
+                            <button class="btn" type="button" id="plus">+</button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn-add-cart">ADD TO CART</button>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit asperiores nesciunt
+                            maxime enim error explicabo sapiente quisquam autem, dolore eligendi in vero aspernatur.
+                            Nostrum consequatur ducimus eaque earum labore esse!</p>
+                        <i class="fa fa-times"></i>
+                        <div class="fa-bot fa fa-whatsapp fa-2x"></div>
+                        <div class="fa-bot fa fa-facebook fa-2x"></div>
+                        <div class="fa-bot fa fa-twitter fa-2x"></div>
+                        <div class="fa-bot fa fa-pinterest fa-2x"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview" data-target="p-4">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="images/ON SALE/wardrobe/collar-pink.webp" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                        <h1>PET COLLAR</h1>
+                        <h6>ITEM #004</h6>
+                        <h2>100.00</h2>
+                        <h6>QUANTITY</h6>
+                        <div class="btn-plus-minus">
+                            <button class="btn" type="button" id="minus">-</button>
+                            <div>0</div>
+                            <button class="btn" type="button" id="plus">+</button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn-add-cart">ADD TO CART</button>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit asperiores nesciunt
+                            maxime enim error explicabo sapiente quisquam autem, dolore eligendi in vero aspernatur.
+                            Nostrum consequatur ducimus eaque earum labore esse!</p>
+                        <i class="fa fa-times"></i>
+                        <div class="fa-bot fa fa-whatsapp fa-2x"></div>
+                        <div class="fa-bot fa fa-facebook fa-2x"></div>
+                        <div class="fa-bot fa fa-twitter fa-2x"></div>
+                        <div class="fa-bot fa fa-pinterest fa-2x"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview" data-target="p-5">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="images/ON SALE/toy/toyy.webp" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                        <h1>COTTON DOG ROPE</h1>
+                        <h6>ITEM #005</h6>
+                        <h2>100.00</h2>
+                        <h6>QUANTITY</h6>
+                        <div class="btn-plus-minus">
+                            <button class="btn" type="button" id="minus">-</button>
+                            <div>0</div>
+                            <button class="btn" type="button" id="plus">+</button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn-add-cart">ADD TO CART</button>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit asperiores nesciunt
+                            maxime enim error explicabo sapiente quisquam autem, dolore eligendi in vero aspernatur.
+                            Nostrum consequatur ducimus eaque earum labore esse!</p>
+                        <i class="fa fa-times"></i>
+                        <div class="fa-bot fa fa-whatsapp fa-2x"></div>
+                        <div class="fa-bot fa fa-facebook fa-2x"></div>
+                        <div class="fa-bot fa fa-twitter fa-2x"></div>
+                        <div class="fa-bot fa fa-pinterest fa-2x"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview" data-target="p-6">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="images/ON SALE/toy/ball.webp" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                        <h1>ball</h1>
+                        <h6>ITEM #006</h6>
+                        <h2>100.00</h2>
+                        <h6>QUANTITY</h6>
+                        <div class="btn-plus-minus">
+                            <button class="btn" type="button" id="minus">-</button>
+                            <div>0</div>
+                            <button class="btn" type="button" id="plus">+</button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn-add-cart">ADD TO CART</button>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit asperiores nesciunt
+                            maxime enim error explicabo sapiente quisquam autem, dolore eligendi in vero aspernatur.
+                            Nostrum consequatur ducimus eaque earum labore esse!</p>
+                        <i class="fa fa-times"></i>
+                        <div class="fa-bot fa fa-whatsapp fa-2x"></div>
+                        <div class="fa-bot fa fa-facebook fa-2x"></div>
+                        <div class="fa-bot fa fa-twitter fa-2x"></div>
+                        <div class="fa-bot fa fa-pinterest fa-2x"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview" data-target="p-7">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="images/ON SALE/toy/pole.webp" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                        <h1>CAT POLE</h1>
+                        <h6>ITEM #007</h6>
+                        <h2>100.00</h2>
+                        <h6>QUANTITY</h6>
+                        <div class="btn-plus-minus">
+                            <button class="btn" type="button" id="minus">-</button>
+                            <div>0</div>
+                            <button class="btn" type="button" id="plus">+</button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn-add-cart">ADD TO CART</button>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit asperiores nesciunt
+                            maxime enim error explicabo sapiente quisquam autem, dolore eligendi in vero aspernatur.
+                            Nostrum consequatur ducimus eaque earum labore esse!</p>
+                        <i class="fa fa-times"></i>
+                        <div class="fa-bot fa fa-whatsapp fa-2x"></div>
+                        <div class="fa-bot fa fa-facebook fa-2x"></div>
+                        <div class="fa-bot fa fa-twitter fa-2x"></div>
+                        <div class="fa-bot fa fa-pinterest fa-2x"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview" data-target="p-8">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="images/ON SALE/food/food2.webp" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                        <h1>PLASTIC FOOD BOWL</h1>
+                        <h6>ITEM #008</h6>
+                        <h2>100.00</h2>
+                        <h6>QUANTITY</h6>
+                        <div class="btn-plus-minus">
+                            <button class="btn" type="button" id="minus">-</button>
+                            <div>0</div>
+                            <button class="btn" type="button" id="plus">+</button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn-add-cart">ADD TO CART</button>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit asperiores nesciunt
+                            maxime enim error explicabo sapiente quisquam autem, dolore eligendi in vero aspernatur.
+                            Nostrum consequatur ducimus eaque earum labore esse!</p>
+                        <i class="fa fa-times"></i>
+                        <div class="fa-bot fa fa-whatsapp fa-2x"></div>
+                        <div class="fa-bot fa fa-facebook fa-2x"></div>
+                        <div class="fa-bot fa fa-twitter fa-2x"></div>
+                        <div class="fa-bot fa fa-pinterest fa-2x"></div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row gx-0 ">
-            <div class="col-lg-3 sale-bg">
-                <div class="sale-inside">
-                    <img src="images/ON SALE/toy/toyy.webp" class="sale-img-bg" alt="">
-
-                    <div class="sale-btns-pos">
-                        <div class="sale-detail">
-                            <h6>Cat Food</h6>
-                            <hr>
-                            <p>P100.00</p>
-                        </div>
-                        <div class="btn-plus-minus">
-                            <div><button class="btn" type="button" id="minus">-</button></div>
-                            <div>0</div>
-                            <div><button class="btn" type="button" id="plus">+</button></div>
-                        </div>
-
-                        <div>
-                            <button type="button" class="btn-add-cart">ADD TO CART</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-lg-3 sale-bg ">
-                <div class="sale-inside ">
-                    <img src="images/ON SALE/toy/ball.webp" class="sale-img-xl" alt="">
-
-                    <div class="sale-btns-pos">
-                        <div class="sale-detail">
-                            <h6>Cat Food</h6>
-                            <hr>
-                            <p>P100.00</p>
-                        </div>
-                        <div class="btn-plus-minus">
-                            <div><button class="btn" type="button" id="minus">-</button></div>
-                            <div>0</div>
-                            <div><button class="btn" type="button" id="plus">+</button></div>
-                        </div>
-
-                        <div>
-                            <button type="button" class="btn-add-cart">ADD TO CART</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 sale-bg">
-                <div class="sale-inside">
-                    <img src="images/ON SALE/cage/container.webp" class="sale-img-xl" alt="">
-
-                    <div class="sale-btns-pos">
-                        <div class="sale-detail">
-                            <h6>Cat Food</h6>
-                            <hr>
-                            <p>P100.00</p>
-                        </div>
-                        <div class="btn-plus-minus">
-                            <div><button class="btn" type="button" id="minus">-</button></div>
-                            <div>0</div>
-                            <div><button class="btn" type="button" id="plus">+</button></div>
-                        </div>
-
-                        <div>
-                            <button type="button" class="btn-add-cart">ADD TO CART</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 sale-bg">
-                <div class="sale-inside">
-                    <img src="images/ON SALE/toy/pole.webp" class="sale-img-xl" alt="">
-
-                    <div class="sale-btns-pos">
-                        <div class="sale-detail">
-                            <h6>Cat Food</h6>
-                            <hr>
-                            <p>P100.00</p>
-                        </div>
-                        <div class="btn-plus-minus">
-                            <div><button class="btn" type="button" id="minus">-</button></div>
-                            <div>0</div>
-                            <div><button class="btn" type="button" id="plus">+</button></div>
-                        </div>
-
-                        <div>
-                            <button type="button" class="btn-add-cart">ADD TO CART</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <footer>
-        <div class="row ">
-            <div class="col-lg-6 footer-contain">
+        <div class="row footer-contain">
+            <div id="footer-logo" class="col-lg-6 row">
+                <img src="images/LOGO.svg" class="footer-logo col-lg-6 alt="" style=" padding: 0;">
+                <div class="col-lg-6 footer-flex">
+                    <h3>EBABY</h3>
+                    <p>©i-TRI</p>
+                </div>
+            </div>
+            <div id="socmed" class="col-lg-6" style="padding: 0 38px;">
+                <h3>FOLLOW US ON</h3>
                 <div class="">
-                    <h3>FOLLOW US ON</h3>
-                    <div class="footer-flex">
-                        <a href="">
-                            <img src="images/socmed/Vector.svg" class="footer-icon" alt="">
-                        </a>
-                        <a href="">
-                            <img src="images/socmed/Vector-1.svg" class="footer-icon" alt="">
-                        </a>
-                        <a href="">
-                            <img src="images/socmed/Vector-2.svg" class="footer-icon" alt="">
-                        </a>
-                        <a href="">
-                            <img src="images/socmed/Vector-3.svg" class="footer-icon" alt="">
-                        </a>
-                    </div>
+                    <a href="">
+                        <img src="images/socmed/Vector.svg" class="footer-icon" alt="">
+                    </a>
+                    <a href="">
+                        <img src="images/socmed/Vector-1.svg" class="footer-icon" alt="">
+                    </a>
+                    <a href="">
+                        <img src="images/socmed/Vector-2.svg" class="footer-icon" alt="">
+                    </a>
+                    <a href="">
+                        <img src="images/socmed/Vector-3.svg" class="footer-icon" alt="">
+                    </a>
                 </div>
-
-                <div>
-                    <h4>PARTNERS</h4>
-                    <div class="footer-flex">
-                        <div class="partners">
+            </div>
+            <div class="col-lg-6 col-sm-6">
+                <h4>PARTNERS</h4>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="">
                             <p>Monge Philippines<br>Royal Canin<br>Goodest Cat</p>
-
-                        </div>
-                        <div class="partners">
-                            <p>Whiskas<br>Aozi<br>Acana</p>
                         </div>
                     </div>
-                </div>
-
-                <div>
-                    <div class="footer-flex">
-                        <div class="partners">
-                            <h4>RESOURCES</h4>
-                        </div>
-                        <div class="partners">
-                            <h4>COMPANY</h4>
-                        </div>
-                    </div>
-                    <div class="footer-flex">
-                        <div class="partners">
-                            <p>Resources<br>Blogs<br>Vlogs</p>
-                        </div>
-                        <div class="partners">
-                            <p>Join Our Team<br>Carreers</p>
-                        </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <p>Whiskas<br>Aozi<br>Acana</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 footer-contain">
-                <div class="footer-flex">
-                    <img src="images/LOGO.svg" class="footer-logo" alt="">
-                    <div style="height: 20px">
-                        <h3>EBABY</h3>
-                        <p>©i-TRI</p>
-                    </div>
-                </div>
-                <div style="margin-top: 40px; margin-bottom: 20px;">
-                    <h4>DOWNLOAD OUR APP NOW</h4>
-                </div>
-
-                <div class="footer-flex ">
-                    <div class="download">
+            <div class="col-lg-6 col-sm-6">
+                <h4 style="margin-bottom: 20px;">DOWNLOAD OUR APP NOW</h4>
+                <div class="row ">
+                    <div id="footer-store" class="col-lg-4 col-sm-6">
                         <a href="#">
                             <img src="images/E-Baby/ANDORID.svg" alt="">
                         </a>
                     </div>
-
-                    <div>
+                    <div id="footer-store" class="col-lg-4 col-sm-6">
                         <a href="#">
-                            <img src="images/E-Baby/APPLE.svg" alt=""></div>
-                        </a>
+                            <img src="images/E-Baby/APPLE.svg" alt="">
+                    </div>
+                    </a>
                 </div>
 
-                <div>
-                    <div style="margin-top: 20px; margin-bottom: 20px;">
-                        <h4>KEEP IN TOUCH</h4>
+            </div>
+            <div class="col-lg-6 col-sm-6">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <h4>RESOURCES</h4>
+                        <p>Resources<br>Blogs<br>Vlogs</p>
                     </div>
-                    <div class="footer-flex">
-                        <div><input type="text" class="footer-input" placeholder="Your Name" style="padding: 0 0 0 20px;" ></div>
-                        <div><input type="text" class="footer-input" placeholder="Email" style="padding: 0 0 0 20px;"></div>
+                    <div class="col-md-6 col-sm-6">
+                        <h4>COMPANY</h4>
+                        <p>Join Our Team <br> Carreers</p>
                     </div>
-                    <button type="button" class="footer-btn">SUBSCRIBE</button>
-
                 </div>
             </div>
-
+            <div class="col-lg-6 col-sm-6">
+                <h4>KEEP IN TOUCH</h4>
+                <div class="row">
+                    <div class="col-lg-6 ">
+                        <input type="text" class="footer-input" placeholder="Your Name">
+                    </div>
+                    <div class="col-lg-6 ">
+                        <input type="email" class="footer-input" placeholder="Email">
+                    </div>
+                </div>
+                <button type="submit" class="footer-btn">SUBSCRIBE</button>
+            </div>
         </div>
-        <div>
-            yowasap
-        </div>
-
     </footer>
 
     <!-- JAVASCRIPT -->
